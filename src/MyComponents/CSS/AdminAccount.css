@@ -1,0 +1,135 @@
+/* admin account css  */
+.welcomeMsg {
+    display: flex;
+    position: fixed;
+    width: 100%;
+    height: 50px;
+    justify-content: space-between;
+    align-items: center;
+    background-color: transparent;
+    padding: 10px 20px;
+    background-color: #333;
+    color: white;
+    /* margin-bottom: 10px; */
+}
+
+@media only screen and (max-width :400px) {
+    .welcomeMsg h2{
+     font-size: 17px;
+    } 
+  }
+
+.logout {
+    position: absolute;
+    right: 20px;
+    background-color: #424141;
+    color: white;
+    padding: 5px 10px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.logout:hover {
+    background-color: white;
+    padding: 4px 8px;
+    color: #333;
+    border-radius: 10px;
+}
+
+.msg {
+    padding: 10px 20px;
+}
+
+.options {
+    padding: 0px 20px;
+}
+
+.options button {
+    background-color: #333;
+    color: white;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+.options button:hover {
+    background-color: white;
+    padding: 4px 8px;
+    color: #333;
+    border-radius: 10px;
+}
+
+/* form css  */
+
+.Account .container {
+    width: 70%;
+    margin: 20px auto;
+    text-align: center;
+    color: black;
+}
+
+.Account form {
+    text-align: left;
+}
+
+.Account .form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.Account label {
+    margin: 3px 0px;
+}
+
+.Account input {
+    margin-bottom: 10px;
+    border-radius: 6px;
+    background-color: transparent;
+    outline: none;
+    border: none;
+    border-bottom: 2px solid rgb(20, 20, 20);
+    height: 30px;
+    font-size: 18px;
+    text-transform: capitalize;
+    color: black;
+}
+
+.Account .form-group button {
+    background-color: #333;
+    color: white;
+    width: 80px;
+    padding: 5px 10px;
+    border: 2px solid rgb(29, 28, 28);
+    font-weight: bold;
+}
+
+.Account .form-group button:hover {
+    background-color: white;
+    color: black;
+    cursor: pointer;
+} 
+
+.Account .successMessage{
+    width: 100%;
+    background-color: rgb(9, 249, 9);
+    color: black;
+    font-size: 20px;
+}
+
+.Account .teacherDetails{
+    text-align: center;
+}
+
+.Account .teacherDetails button{
+    background-color: #333;
+    color: white;
+    padding: 5px 10px;
+    border: 2px solid rgb(29, 28, 28);
+    font-weight: bold;
+    margin: 10px 0px;
+}
+.Account .teacherDetails button:hover{
+    background-color: white;
+    color: black;
+    cursor: pointer;
+}
+

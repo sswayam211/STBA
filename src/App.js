@@ -1,24 +1,70 @@
-import logo from './logo.svg';
 import './App.css';
+import { HashRouter as Router, Routes, Route } from 'react-router-dom';
+import Header from './MyComponents/Header';
+import Home from './MyComponents/Pages/Home';
+import Login from "./MyComponents/Pages/Login";
+import About from './MyComponents/Pages/About';
+import Services from './MyComponents/Pages/Services';
+import AdminAccount from './MyComponents/Accounts/AdminAccount';
+import StudentAccount from './MyComponents/Accounts/StudentAccount';
+import TeacherAccount from './MyComponents/Accounts/TeacherAccount';
+import RegisterUser from './MyComponents/Pages/RegisterUser';
 
 function App() {
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <Router>
+        {/* <Header /> */}
+        <Routes>
+          <Route path="/" element={
+            <>
+              <Header />
+              <Home />
+            </>
+          } />
+          <Route path="/login" element={
+            <>
+              <Header />
+              <Login />
+            </>
+          } />
+          <Route path="/register" element={
+            <>
+              <Header />
+              <RegisterUser />
+            </>
+          } />
+          <Route path="/about" element={
+            <>
+              <Header />
+              <About />
+            </>
+          } />
+          <Route path="/services" element={
+            <>
+              <Header />
+              <Services />
+            </>
+          } />
+          <Route path="/admin" element={
+            <>
+              <AdminAccount />
+            </>
+          } />
+          <Route path="/student" element={
+            <>
+              <StudentAccount />
+            </>
+          } />
+          <Route path="/teacher" element={
+            <>
+              <TeacherAccount />
+            </>
+          } />
+        </Routes>
+      </Router>
+    </>
   );
 }
 

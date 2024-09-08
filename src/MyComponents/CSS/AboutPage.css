@@ -1,0 +1,46 @@
+/* about page css  */
+.navbar {
+    /* background-color: #333; */
+}
+
+.about-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+
+.about-container h1 {
+    text-align: center;
+    color: #333;
+}
+
+.about-container h2 {
+    color: #444;
+    margin-top: 20px;
+}
+
+.about-container p {
+    margin-bottom: 15px;
+    color: #666;
+}
+
+.about-container ul {
+    list-style-type: disc;
+    padding-left: 20px;
+    color: #666;
+}
+
+.about-container ul li {
+    margin-bottom: 10px;
+}
+
+.about-container a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.about-container a:hover {
+    text-decoration: underline;
+}

@@ -1,70 +1,46 @@
-# Getting Started with Create React App
+## About this project 
+this is a web appoilication in which student and teacher can book and schedule appointment and student can send message to teacher.
+this is a full stack project which includes both frontend and backend
+for backend i used node.js, express.js and MySql for database
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## database details
+this project's database curently uses 7 no. of tables in it's database 
 
-## Available Scripts
+for testing you need to run backend code first, it will create database required in this project with all the tables.
 
-In the project directory, you can run:
+database name : stba
+tables : login,student,teacher,appointment,registration request ,scheduled appointment, and student message table are the tables
 
-### `npm start`
+once the tables are created in database make sure to add admin details in login table like username,password,email and description = "admin" manually in table.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## how to run project 
+1. open 2 terminals in code editor 1 for backend and other for frontend.
+2. in 1st terminals go to path of backend directory and then run 'npm start' command.
+3. in 2nd terminals go to path of student-teacher directory and then run 'npm start' command.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+then you can be able to test this project , i tested this project mannually by myself and its working fine for me.
 
-### `npm test`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## working of this project
+1. user authentication at login page from database login table 
+2. this project has 3 types of account admin, techer, and student account
+3. at admin account, admin can add teacher,update teacher detail, detele teacher, and approve or cancel student registration request with few clicks.
+4. at teacher account,teacher can see messages sent by student , see all appointments request, and schedule or cancel appointment request with few clicks,
+5. at student account, studnet can search for teacher ,book appointment ,and send message to teacher with fewer clicks.
+6. for every actions, like approving or canceling appointment request by teacher or registration request by admin , an email is send to students given email address to noftify them about the status to there request.
 
-### `npm run build`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## additional details
+in server.js file make sure to change email and password so that email can be send 
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+in this code part of code :
+const transporter = nodemailer.createTransport({
+    service: 'gmail',
+    auth: {
+        user: 'sswayam211@gmail.com', // Your email address
+        pass: 'qwqz gytz hhfu tsqp'    // Your email password or application-specific password
+    }
+});
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+i used my email for testing 
+rest of the code will be fine ,I hope.
